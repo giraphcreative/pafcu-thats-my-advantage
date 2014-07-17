@@ -1,0 +1,208 @@
+
+
+// color variables
+$teal: #83BAB2;
+$red: #B30838;
+
+
+@import "reset";
+
+@import "fonts";
+
+@import "mixins";
+
+@import "base";
+
+@import "grid";
+
+
+
+// background-container
+.container {
+	padding-bottom: 40px;
+
+	@include respond-to( 1220px ) {
+		margin: 30px 0;
+		box-shadow: 0 0 25px rgba( 0, 0, 0, 0.4 );
+	}
+}
+
+
+// header styles
+header {
+	position: relative;
+	
+	a {
+		opacity: .7;
+		transition: opacity 400ms ease-in-out;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.logo {
+		position: absolute;
+		top: 4px;
+		right: 4px;
+		max-width: 30%;
+
+		@include respond-to( 800px ) {
+			top: 30px;
+			right: 30px;
+		}
+	}
+
+}
+
+
+// wrap div
+.wrap {
+	max-width: 1220px;
+	margin: 0 auto;
+	position: relative;
+	@include clearfix;
+}
+
+
+
+// padding div that'll resize for larger screens.
+.pad {
+	padding: 30px 20px;
+
+	@include respond-to( 768px ) { padding: 30px 50px; }
+	@include respond-to( 1025px ) { padding: 40px 70px; }
+}
+
+
+
+// tool styles
+.tool {
+	
+	.calculator {
+		padding: 20px 15px 30px;
+		
+		@include respond-to( 768px ) { 
+			padding: 30px 20px 40px; 
+			border-radius: 20px;
+		}
+
+		@include respond-to( 1024px ) {
+			padding: 40px;
+		}
+	}
+
+	.half.right.first {
+		padding: 20px;
+
+		@include respond-to( 768px ) {
+			padding: 0 20px 0;
+		}
+	}
+}
+
+
+
+
+// results styles
+.results {
+	display: none;
+	@extend .pad;
+
+	// large title
+	.large-title {
+		font-size: 2em;
+		text-align: center;
+
+		@include respond-to( 768px ) {
+			font-size: 3em;
+			padding: 10px 20px;
+		}
+	}
+
+	// big ole apply button
+	a.apply {
+		padding: 30px 15px;
+		font-size: 30px;
+		line-height: 35px;
+		margin: 20px 0;
+
+		span {
+			display: block;
+			font-weight: bold;
+			font-size: 40px;
+			line-height: 45px;
+		}
+
+		@include respond-to( 768px ) { 
+			padding: 50px 20px;
+			width: 50%;
+			margin: 40px 25% 15px;
+			font-size: 35px;
+			line-height: 40px;
+
+			span {
+				font-size: 45px;
+				line-height: 50px;
+			}
+		}
+	}
+
+}
+
+
+
+
+
+// footer styles
+.footer-bar {
+	color: white;
+	padding: 30px 20px;
+	text-align: center;
+
+	h2, h4 {
+		&, a {
+			color: white;
+		}
+
+		@include font;
+
+		@include respond-to( 768px ) {
+			@include font-bold;
+		}
+	}
+
+	h2 {
+		font-size: 3em;
+		@include respond-to( 768px ) { font-size: 3.5em; }
+	}
+
+	h4 {
+		font-size: 17px;
+		@include respond-to( 800px ) { font-size: 26px; }
+	}
+
+	.sixty, .fourty {
+		text-align: center;
+	}
+
+	@include respond-to( 768px ) {
+		margin-top: 30px;
+	}
+
+	.half.separator {
+		@include respond-to( 768px ) {
+			width: 46.5%;
+		}
+	}
+}
+
+
+.fine-print {
+	padding: 20px;
+
+	img {
+		float: right;
+		margin: 0 0 15px 15px;
+	}
+}
