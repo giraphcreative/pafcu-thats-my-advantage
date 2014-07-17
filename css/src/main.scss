@@ -151,27 +151,21 @@ header {
 
 				&.yellow { 
 					background-color: $yellow;
-					&:before {
-						transform: rotate( -90deg );
-					}
-				}
-
-				&.teal { 
-					background-color: $teal;
 				}
 
 				&.green { 
 					background-color: $green;
-					&:before {
-						transform: rotate( 90deg );
-					}
+					&:before { transform: rotate( 180deg ); }
+				}
+
+				&.teal { 
+					background-color: $teal;
+					&:before { transform: rotate( 90deg ); }
 				}
 
 				&.red { 
 					background-color: $red;
-					&:before {
-						transform: rotate( 180deg );
-					}
+					&:before { transform: rotate( -90deg ); }
 				}
 			}
 
