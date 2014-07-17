@@ -4,7 +4,7 @@ body {
 	font-size: 85%;
 	line-height: 1.5em;
 	color: #333;
-	background-color: $tan;
+	background-color: #eee;
 	
 	@include respond-to( 1024px ) {
 		font-size: 100%;
@@ -12,16 +12,12 @@ body {
 }
 
 a {
-	color: darken( $teal-light, 10% );
+	color: $teal;
 	text-decoration: none;
 	cursor: pointer;
 
 	&:hover {
-		color: $teal-light;
-	}
-
-	&.no-dots {
-		border-bottom: 0;
+		color: lighten( $teal, 10% );
 	}
 }
 

@@ -1,8 +1,11 @@
 
 
 // color variables
+$yellow: #F3C25B;
 $teal: #83BAB2;
+$green: #8B9E74;
 $red: #B30838;
+$grey: #6D6E71;
 
 
 @import "reset";
@@ -19,11 +22,13 @@ $red: #B30838;
 
 // background-container
 .container {
+	background: white;
 	padding-bottom: 40px;
 
 	@include respond-to( 1220px ) {
+		padding-bottom: 20px;
 		margin: 30px 0;
-		box-shadow: 0 0 25px rgba( 0, 0, 0, 0.4 );
+		box-shadow: 0 0 25px rgba( black, 0.3 );
 	}
 }
 
@@ -78,9 +83,18 @@ header {
 
 // tool styles
 .tool {
+	padding: 0;
 	
+	@include respond-to( 768px ) {
+		padding: 20px 40px;
+	}
+
 	.calculator {
+		background-color: $teal;
+		color: white;
+		text-align: center;
 		padding: 20px 15px 30px;
+		margin-top: 30px;
 		
 		@include respond-to( 768px ) { 
 			padding: 30px 20px 40px; 
@@ -94,10 +108,7 @@ header {
 
 	.half.right.first {
 		padding: 20px;
-
-		@include respond-to( 768px ) {
-			padding: 0 20px 0;
-		}
+		text-align: center;
 	}
 }
 
@@ -156,6 +167,7 @@ header {
 
 // footer styles
 .footer-bar {
+	background: $grey url(../img/bg-footer-bar.png) center center no-repeat;
 	color: white;
 	padding: 30px 20px;
 	text-align: center;
@@ -200,6 +212,8 @@ header {
 
 .fine-print {
 	padding: 20px;
+	font-size: .85em;
+	line-height: 1.3em;
 
 	img {
 		float: right;
