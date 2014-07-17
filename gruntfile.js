@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         // watch for changes and trigger compass, jshint, uglify and livereload
         watch: {
             js: {
-                files: ['<%= jsLibDir %>/*.js', '<%= jsSrcDir %>/*.js'],
+                files: ['<%= jsLibDir %>/**/*.js', '<%= jsSrcDir %>/*.js'],
                 tasks: ['uglify'],
                 options: {
                     livereload: true,
@@ -52,13 +52,12 @@ module.exports = function(grunt) {
             js: {
                 files: {
                     '<%= jsDir %>/main.js': [
-                        '<%= jsLibDir %>/accrue.js',
+                        '<%= jsLibDir %>/accrue/jquery.accrue.js',
                         '<%= jsSrcDir %>/*.js',
                     ],
                     '<%= jsDir %>/head.js': [
-                        '<%= jsLibDir %>/css-browser-selector.js',
-                        '<%= jsLibDir %>/html5shiv.js',
-                        '<%= jsLibDir %>/respond.js',
+                        '<%= jsLibDir %>/shiv/dist/html5shiv.js',
+                        '<%= jsLibDir %>/respond/dest/respond.min.js',
                     ],
                 }
             }
