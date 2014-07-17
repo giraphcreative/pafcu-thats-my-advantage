@@ -5,6 +5,7 @@ $(function(){
 	$(".calculator").accrue({
 		mode: "compare",
 		response_output_div: ".result-amount",
+        response_compare: "%savings%",
 		operation: "button",
 		error_text: "$0",
 		callback: function( elem, data ){
