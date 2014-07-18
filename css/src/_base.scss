@@ -3,7 +3,7 @@ body {
 	@include font;
 	font-size: 85%;
 	line-height: 1.5em;
-	color: #333;
+	color: $grey;
 	background-color: #eee;
 	
 	@include respond-to( 1024px ) {
@@ -88,17 +88,36 @@ select {
 }
 
 input[type=submit], button, .btn {
-	@include font;
-	padding: 12px 15px;
+	@include font-title;
+	padding: 15px 30px 15px 15px;
 	background: $red;
 	color: white;
-	font-size: 25px;
+	font-size: 1.3em;
 	display: block;
 	width: 100%;
 	border: 0;
-	border-radius: 10px;
+	border-radius: 20px;
 	cursor: pointer;
 	text-align: center;
+	position: relative;
+
+	span {
+		display: block;
+		color: $yellow;
+	}
+
+
+	
+	&:after {
+		content: "";
+		position: absolute;
+		right: 3%;
+		top: 50%;
+		width: 40px;
+		height: 40px;
+		margin-top: -20px;
+		background: url(../img/arrow.png);
+	}
 
 	&:hover {
 		color: white;
