@@ -58,12 +58,16 @@ header {
 		}
 	}
 
+	@include respond-to( 800px ) {
+		margin-top: -40px;
+	}
+
 }
 
 
 // wrap div
 .wrap {
-	max-width: 1220px;
+	max-width: 1100px;
 	margin: 0 auto;
 	position: relative;
 	@include clearfix;
