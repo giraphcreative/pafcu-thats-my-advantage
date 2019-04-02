@@ -1,5 +1,5 @@
 {
-    "name" : "shift-and-go-mobile",
+    "name" : "project",
     "version" : "1.0.0",
     "devDependencies" : {
         "grunt" :                       "latest",
